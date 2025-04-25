@@ -7,22 +7,22 @@ import Image from 'next/image';
 
 const testimonials = [
   {
-    quote: "These headphones completely changed my listening experience. The sound quality is incredible and the noise cancellation is unmatched.",
-    author: "Sarah Johnson",
-    title: "Music Producer",
-    avatar: "https://images.pexels.com/photos/762020/pexels-photo-762020.jpeg?auto=compress&cs=tinysrgb&w=150"
+    quote: "Router ya Airtel Mini Pocket Wi-Fi imebadilisha maisha yangu! Ninaweza kubeba kwenye mfuko wangu na kushikamana na intaneti popote pale. Data za GB 20 za mwezi wa kwanza ni za kutosha kabisa!",
+    author: "Fatuma Ally",
+    title: "Mwanafunzi wa Chuo",
+    avatar: "/assets/images/image1.jpg"
   },
   {
-    quote: "As someone who travels frequently, the SonicWave Pro has been a game-changer. The battery lasts my entire international flight and the comfort is exceptional.",
-    author: "Michael Chen",
-    title: "Business Traveler",
-    avatar: "https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=150"
+    quote: "Airtel 5G Router ni ya kasi sana! Ninaunganisha vifaa vyangu vyote, kutoka simu hadi TV, bila matatizo yoyote. Kasi ya 5G inafanya kazi zangu za ofisini ziwe rahisi zaidi.",
+    author: "Joseph Mwanga",
+    title: "Mfanyabiashara",
+    avatar: "/assets/images/image2.jpg"
   },
   {
-    quote: "I've tried numerous premium headphones, but none compare to the SonicWave Pro. The sound clarity and noise cancellation technology are truly in a league of their own.",
-    author: "Alex Rivera",
-    title: "Audio Engineer",
-    avatar: "https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=150"
+    quote: "Router hizi za Airtel ziko juu! Mini Pocket Wi-Fi ina betri inayodumu zaidi ya masaa saba, na 5G Router inaunganisha vifaa vingi sana. Zote ziko na bei nafuu na zinanifaa kabisa!",
+    author: "Amina Juma",
+    title: "Mwalimu",
+    avatar: "/assets/images/image.jpeg"
   }
 ];
 
@@ -50,9 +50,9 @@ const TestimonialsSection = () => {
           transition={{ duration: 0.5 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">What Our Customers Say</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Wateja Wetu Wanasema Nini</h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Don't just take our word for it. Here's what SonicWave Pro users have to say about their experience.
+            Usisikie tu kutoka kwetu. Hivi ndivyo wateja wa Airtel Mini Pocket Wi-Fi na Airtel 5G Router wanavyosema kuhusu uzoefu wao.
           </p>
         </motion.div>
 

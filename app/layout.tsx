@@ -6,8 +6,8 @@ import { ThemeProvider } from '@/components/theme-provider';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'SonicWave Pro - Premium Noise-Cancelling Headphones',
-  description: 'Experience crystal clear sound with SonicWave Pro noise-cancelling headphones. Industry-leading battery life and comfort for all-day listening.',
+  title: 'Airtel Internet - High-Speed 4G & 5G Routers',
+  description: 'Stay connected with Airtel Mini Pocket Wi-Fi and Airtel 5G Router. Fast, reliable internet for home, office, or on-the-go in Mbeya, Tanzania.',
 };
 
 export default function RootLayout({

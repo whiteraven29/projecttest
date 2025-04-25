@@ -25,11 +25,11 @@ const HeroSection = () => {
               transition={{ duration: 0.5 }}
             >
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
-                Experience Sound <br />
+                Experience Speed Internet <br />
                 <span className="text-primary">Like Never Before</span>
               </h1>
               <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-md">
-                SonicWave Pro delivers crystal clear sound with industry-leading noise cancellation and 40-hour battery life.
+                Airtel Router delivers speed and reliable internet with more than one device connection and 7-hour battery life.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button size="lg" onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}>
@@ -76,8 +76,8 @@ const HeroSection = () => {
               <div className="relative mx-auto max-w-md">
                 <div className="absolute -inset-1 bg-gradient-to-r from-primary/20 to-secondary/20 rounded-full blur-3xl opacity-30" />
                 <Image
-                  src="https://images.pexels.com/photos/3587478/pexels-photo-3587478.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-                  alt="SonicWave Pro Headphones"
+                  src="/assets/images/router.jpeg"
+                  alt="Airtel Router"
                   width={600}
                   height={600}
                   className="relative rounded-2xl shadow-xl"

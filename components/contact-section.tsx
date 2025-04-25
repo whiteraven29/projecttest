@@ -24,9 +24,6 @@ const formSchema = z.object({
   name: z.string().min(2, {
     message: "Name must be at least 2 characters.",
   }),
-  email: z.string().email({
-    message: "Please enter a valid email address.",
-  }),
   phone: z.string().min(10, {
     message: "Please enter a valid phone number.",
   }),
@@ -51,7 +48,6 @@ const ContactSection = () => {
     resolver: zodResolver(formSchema),
     defaultValues: {
       name: "",
-      email: "",
       phone: "",
       location: "",
       message: "",
@@ -59,7 +55,6 @@ const ContactSection = () => {
   });
 
   function onSubmit(values: z.infer<typeof formSchema>) {
-    // In a real application, this would send the data to a server
     console.log(values);
     setSubmitted(true);
     toast.success("Thanks for your interest! We'll contact you soon.");
@@ -67,13 +62,13 @@ const ContactSection = () => {
   }
 
   const regions = [
-    "North America",
-    "Europe",
-    "Asia-Pacific",
-    "South America",
-    "Africa",
-    "Middle East",
-    "Australia & Oceania"
+    "Mbeya",
+    "Dar es Salaam",
+    "Arusha",
+    "Dodoma",
+    "Mwanza",
+    "Tanga",
+    "Other"
   ];
 
   return (
@@ -92,7 +87,7 @@ const ContactSection = () => {
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Get in Touch</h2>
             <p className="text-muted-foreground text-lg mb-6">
-              Be among the first to experience the SonicWave revolution. Leave your details and our team will contact you with exclusive offers.
+              Connect with us to explore Airtel Mini Pocket Wi-Fi and Airtel 5G Router options. Leave your details, and our team will reach out with the best offers.
             </p>
             <div className="space-y-6">
               <div className="flex items-start">
@@ -103,7 +98,7 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <h3 className="text-lg font-medium">Email Us</h3>
-                  <p className="text-muted-foreground">support@sonicwave.com</p>
+                  <p className="text-muted-foreground">mwangeladanny@gmail.com</p>
                 </div>
               </div>
               <div className="flex items-start">
@@ -114,7 +109,7 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <h3 className="text-lg font-medium">Call Us</h3>
-                  <p className="text-muted-foreground">+1 (888) SONIC-WAVE</p>
+                  <p className="text-muted-foreground">+255 742 453214</p>
                 </div>
               </div>
               <div className="flex items-start">
@@ -126,7 +121,7 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <h3 className="text-lg font-medium">Visit Us</h3>
-                  <p className="text-muted-foreground">123 Audio Lane, Sound City, CA 90210</p>
+                  <p className="text-muted-foreground">Iyunga, Mbeya, Tanzania</p>
                 </div>
               </div>
             </div>
@@ -153,19 +148,6 @@ const ContactSection = () => {
                       <FormLabel>Name</FormLabel>
                       <FormControl>
                         <Input placeholder="Your name" {...field} />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-                <FormField
-                  control={form.control}
-                  name="email"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>Email</FormLabel>
-                      <FormControl>
-                        <Input placeholder="your.email@example.com" {...field} />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -219,7 +201,7 @@ const ContactSection = () => {
                       <FormLabel>Message (Optional)</FormLabel>
                       <FormControl>
                         <Textarea 
-                          placeholder="Tell us about your audio needs" 
+                          placeholder="Tell us about your connectivity needs" 
                           className="resize-none"
                           {...field} 
                         />

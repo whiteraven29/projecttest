@@ -1,5 +1,7 @@
+"use client";
+
 import Link from 'next/link';
-import { Facebook, Twitter, Instagram, Linkedin, Youtube } from 'lucide-react';
+import { Facebook, X, MessageCircle } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -8,26 +10,35 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
           <div>
             <Link href="/" className="text-2xl font-bold">
-              SonicWave
+              Airtel Internet
             </Link>
             <p className="mt-4 text-muted-foreground">
-              Experience sound like never before with our premium noise-cancelling headphones.
+              Experience fast and reliable internet with Airtel Mini Pocket Wi-Fi and Airtel 5G Router, designed for your everyday needs.
             </p>
             <div className="flex space-x-4 mt-6">
-              <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">
+              <a 
+                href="https://www.facebook.com/airteltanzania" 
+                className="text-muted-foreground hover:text-foreground transition-colors"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Facebook size={20} />
               </a>
-              <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">
-                <Twitter size={20} />
+              <a 
+                href="https://x.com/airteltanzania" 
+                className="text-muted-foreground hover:text-foreground transition-colors"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <X size={20} />
               </a>
-              <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">
-                <Instagram size={20} />
-              </a>
-              <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">
-                <Linkedin size={20} />
-              </a>
-              <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">
-                <Youtube size={20} />
+              <a 
+                href="https://wa.me/+255742453214" 
+                className="text-muted-foreground hover:text-foreground transition-colors"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <MessageCircle size={20} />
               </a>
             </div>
           </div>
@@ -36,29 +47,14 @@ const Footer = () => {
             <h3 className="font-semibold text-lg mb-4">Products</h3>
             <ul className="space-y-3">
               <li>
-                <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">
-                  SonicWave Lite
-                </a>
+                <Link href="#pricing" className="text-muted-foreground hover:text-foreground transition-colors">
+                  Airtel Mini Pocket Wi-Fi
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">
-                  SonicWave Pro
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">
-                  SonicWave Studio
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">
-                  Accessories
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">
-                  Gift Cards
-                </a>
+                <Link href="#pricing" className="text-muted-foreground hover:text-foreground transition-colors">
+                  Airtel 5G Router
+                </Link>
               </li>
             </ul>
           </div>
@@ -67,28 +63,23 @@ const Footer = () => {
             <h3 className="font-semibold text-lg mb-4">Support</h3>
             <ul className="space-y-3">
               <li>
-                <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">
+                <Link href="https://wa.me/+255742453214" className="text-muted-foreground hover:text-foreground transition-colors">
                   Help Center
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">
+                <Link href="https://wa.me/+255742453214" className="text-muted-foreground hover:text-foreground transition-colors">
                   Contact Us
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">
+                <Link href="#faq" className="text-muted-foreground hover:text-foreground transition-colors">
                   Warranty
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">
+                <a href="mailto:mwangeladdanyy@gmail.com" className="text-muted-foreground hover:text-foreground transition-colors">
                   Returns & Exchanges
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">
-                  Order Status
                 </a>
               </li>
             </ul>
@@ -114,11 +105,6 @@ const Footer = () => {
               </li>
               <li>
                 <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">
-                  Sustainability
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">
                   Our Partners
                 </a>
               </li>
@@ -129,7 +115,7 @@ const Footer = () => {
         <div className="border-t border-border pt-8">
           <div className="flex flex-col md:flex-row md:justify-between md:items-center">
             <p className="text-sm text-muted-foreground mb-4 md:mb-0">
-              © {new Date().getFullYear()} SonicWave. All rights reserved.
+              © {new Date().getFullYear()} Airtel Internet, Mbeya. All rights reserved.
             </p>
             <div className="flex flex-wrap gap-4 text-sm text-muted-foreground">
               <a href="#" className="hover:text-foreground transition-colors">

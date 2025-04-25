@@ -88,46 +88,31 @@ const PricingSection = () => {
 
   const plans = [
     {
-      title: "SonicWave Lite",
-      price: "$199",
-      description: "Essential features for casual listeners",
+      title: "Airtel Mini Pocket Wi-Fi (4G)",
+      price: "TSh 50,000",
+      description: "Portable 4G connectivity for on-the-go users",
       features: [
-        "Active Noise Cancellation",
-        "30-hour battery life",
-        "Bluetooth 5.0",
-        "Standard audio drivers",
-        "1-year warranty"
+        "20GB free data for one month",
+        "Super 4G speed",
+        "Connects up to 10 devices",
+        "Highly portable design",
+        "7+ hours battery life"
       ]
     },
     {
-      title: "SonicWave Pro",
-      price: "$299",
-      description: "Premium experience for audio enthusiasts",
+      title: "Airtel 5G Router",
+      price: "TSh 110,000",
+      description: "High-speed 5G connectivity for homes and offices",
       features: [
-        "Advanced Noise Cancellation",
-        "40-hour battery life",
-        "Bluetooth 5.2 with multipoint",
-        "40mm Titanium drivers",
-        "Adaptive EQ technology",
-        "Water & Sweat resistant",
-        "3-year warranty"
+        "Lightning-fast 5G speeds",
+        "Connects up to 64 devices",
+        "Dual-band WiFi (2.4GHz & 5GHz)",
+        "Four Ethernet ports",
+        "Includes UPS/power bank",
+        "30-day data plans from TSh 70,000",
+        "1-year warranty"
       ],
       isPopular: true
-    },
-    {
-      title: "SonicWave Studio",
-      price: "$399",
-      description: "Professional-grade for creators",
-      features: [
-        "Studio-grade Noise Cancellation",
-        "60-hour battery life",
-        "Bluetooth 5.2 with aptX HD",
-        "50mm Carbon fiber drivers",
-        "Adaptive EQ with custom profiles",
-        "Water & Sweat resistant",
-        "Includes studio cable kit",
-        "5-year warranty"
-      ]
     }
   ];
 
@@ -145,13 +130,13 @@ const PricingSection = () => {
           transition={{ duration: 0.5 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Choose Your SonicWave</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Choose Your Airtel Router</h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Select the perfect model that fits your lifestyle and budget. Every SonicWave comes with our satisfaction guarantee.
+            Select the perfect Airtel router to stay connected with high-speed internet, whether at home or on the go.
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {plans.map((plan, index) => (
             <PricingCard
               key={index}

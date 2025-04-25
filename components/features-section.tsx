@@ -3,7 +3,7 @@
 import { useEffect } from 'react';
 import { motion, useAnimation } from '@/lib/motion';
 import { useInView } from '@/lib/use-in-view';
-import { WifiIcon, Battery, Headphones, Zap, Shield, Volume2 } from 'lucide-react';
+import { WifiIcon, Battery, Smartphone, Zap, Pocket, Gift } from 'lucide-react';
 
 const FeatureCard = ({ icon, title, description, index }: { 
   icon: React.ReactNode;
@@ -44,34 +44,29 @@ const FeatureCard = ({ icon, title, description, index }: {
 const FeaturesSection = () => {
   const features = [
     {
-      icon: <Headphones size={24} />,
-      title: "Active Noise Cancellation",
-      description: "Industry-leading ANC technology that blocks out 99.7% of external noise for immersive listening."
-    },
-    {
-      icon: <Battery size={24} />,
-      title: "40-Hour Battery Life",
-      description: "Extended battery life that lasts for days of normal use. Quick charge gives you 5 hours in just 10 minutes."
-    },
-    {
-      icon: <WifiIcon size={24} />,
-      title: "Bluetooth 5.2",
-      description: "Latest Bluetooth technology ensures stable connection up to 100ft away with minimal latency."
+      icon: <Gift size={24} />,
+      title: "20GB Free Data",
+      description: "Get 20GB of data valid for a full month upon purchase, perfect for browsing, streaming, and more."
     },
     {
       icon: <Zap size={24} />,
-      title: "Hi-Fi Sound Quality",
-      description: "40mm titanium drivers deliver studio-quality sound with deep bass and crystal clear highs."
+      title: "Super 4G Speed",
+      description: "Experience blazing-fast 4G connectivity for seamless internet access on all your devices."
     },
     {
-      icon: <Shield size={24} />,
-      title: "Water & Sweat Resistant",
-      description: "IPX4-rated protection keeps your headphones safe during workouts or light rain."
+      icon: <Smartphone size={24} />,
+      title: "Connects Up to 10 Devices",
+      description: "Supports simultaneous connections for smartphones, laptops, desktops, and smart TVs."
     },
     {
-      icon: <Volume2 size={24} />,
-      title: "Adaptive EQ",
-      description: "Smart technology that automatically adjusts sound balance based on your listening preferences."
+      icon: <Pocket size={24} />,
+      title: "Highly Portable",
+      description: "Compact design fits in your pocket, bag, or pouch, making it easy to carry anywhere."
+    },
+    {
+      icon: <Battery size={24} />,
+      title: "Long Battery Life",
+      description: "Holds a charge for 7+ hours, ensuring reliable connectivity throughout your day."
     }
   ];
 
@@ -98,9 +93,9 @@ const FeaturesSection = () => {
           transition={{ duration: 0.5 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Premium Features</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Airtel Mini Pocket Wi-Fi Features</h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            SonicWave Pro combines cutting-edge technology with elegant design to deliver an exceptional audio experience.
+            For only TSh 50,000, the Airtel Mini Pocket Wi-Fi delivers high-speed 4G connectivity in a portable package, perfect for staying connected on the go.
           </p>
         </motion.div>
 
