@@ -31,6 +31,7 @@ const formSchema = z.object({
     message: "Please select your location.",
   }),
   message: z.string().optional(),
+  botField: z.string().optional(), // Honeypot field for spam protection
 });
 
 const ContactSection = () => {
@@ -51,14 +52,39 @@ const ContactSection = () => {
       phone: "",
       location: "",
       message: "",
+      botField: "",
     },
   });
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    console.log(values);
-    setSubmitted(true);
-    toast.success("Thanks for your interest! We'll contact you soon.");
-    form.reset();
+  async function onSubmit(values: z.infer<typeof formSchema>) {
+    try {
+      // Prepare form data for Netlify
+      const formData = new FormData();
+      formData.append("form-name", "contact-form");
+      formData.append("name", values.name);
+      formData.append("phone", values.phone);
+      formData.append("location", values.location);
+      formData.append("message", values.message || "");
+      formData.append("bot-field", values.botField || "");
+
+      // Submit to Netlify Forms
+      const response = await fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams(formData as any).toString(),
+      });
+
+      if (response.ok) {
+        setSubmitted(true);
+        toast.success("Thanks for your interest! We'll contact you soon.");
+        form.reset();
+      } else {
+        throw new Error("Form submission failed");
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      toast.error("Something went wrong. Please try again.");
+    }
   }
 
   const regions = [
@@ -139,7 +165,27 @@ const ContactSection = () => {
           >
             <h3 className="text-2xl font-semibold mb-6">Request Information</h3>
             <Form {...form}>
-              <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+              <form
+                onSubmit={form.handleSubmit(onSubmit)}
+                className="space-y-6"
+                data-netlify="true"
+                data-netlify-honeypot="bot-field"
+                name="contact-form"
+              >
+                {/* Hidden fields for Netlify */}
+                <input type="hidden" name="form-name" value="contact-form" />
+                <FormField
+                  control={form.control}
+                  name="botField"
+                  render={({ field }) => (
+                    <FormItem className="hidden">
+                      <FormLabel>Bot Field</FormLabel>
+                      <FormControl>
+                        <Input {...field} />
+                      </FormControl>
+                    </FormItem>
+                  )}
+                />
                 <FormField
                   control={form.control}
                   name="name"
